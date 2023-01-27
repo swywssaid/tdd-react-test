@@ -40,3 +40,19 @@ test("on/off button has blue color", () => {
   const buttonElement = screen.getByTestId("on/off-button");
   expect(buttonElement).toHaveStyle({ backgroundColor: "blue" });
 });
+
+test("when on/off button is pressed, minus button is disabled", () => {
+  render(<App />);
+  const onOffButtonElement = screen.getByTestId("on/off-button");
+  fireEvent.click(onOffButtonElement);
+  const minusButton = screen.getByTestId("minus-button");
+  expect(minusButton).toBeDisabled("disabled");
+});
+
+test("when on/off button is pressed, plus button is disabled", () => {
+  render(<App />);
+  const onOffButtonElement = screen.getByTestId("on/off-button");
+  fireEvent.click(onOffButtonElement);
+  const plusButton = screen.getByTestId("plus-button");
+  expect(plusButton).toBeDisabled("disabled");
+});
