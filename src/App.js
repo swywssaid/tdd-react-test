@@ -15,6 +15,9 @@ function App() {
       <button data-testid="plus-button" onClick={() => setCount((prev) => ++prev)}>
         +
       </button>
+      <button data-testid="on/off-button" style={{ backgroundColor: "blue" }}>
+        on/off
+      </button>
     </div>
   );
 }

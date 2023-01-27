@@ -34,3 +34,9 @@ test("when the plus button is pressed, the counter increases by 1", () => {
   const counterElement = screen.getByTestId("counter");
   expect(counterElement).toHaveTextContent(1);
 });
+
+test("on/off button has blue color", () => {
+  render(<App />);
+  const buttonElement = screen.getByTestId("on/off-button");
+  expect(buttonElement).toHaveStyle({ backgroundColor: "blue" });
+});
