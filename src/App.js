@@ -9,6 +9,12 @@ function App() {
       <header className="App-header">
         <h3 data-testid="counter">{count}</h3>
       </header>
+      <button data-testid="minus-button" onClick={() => setCount((prev) => --prev)}>
+        -
+      </button>
+      <button data-testid="plus-button" onClick={() => setCount((prev) => ++prev)}>
+        +
+      </button>
     </div>
   );
 }
